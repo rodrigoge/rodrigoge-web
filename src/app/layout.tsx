@@ -1,5 +1,6 @@
 import type { Metadata } from 'next'
 import { Author } from 'next/dist/lib/metadata/types/metadata-types'
+import '../styles/themes.scss'
 
 export const author: Author = {
   url: 'https://github.com/rodrigoge',
@@ -22,7 +23,6 @@ export const metadata: Metadata = {
     'JavaScript',
     'Typescript'
   ],
-  viewport: 'width=device-width, initial-scale=1.0',
   robots: 'index, follow'
 }
 
@@ -33,6 +33,7 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en">
+      <link rel="icon" href="/favicon.ico" />
       <body>{children}</body>
     </html>
   )
