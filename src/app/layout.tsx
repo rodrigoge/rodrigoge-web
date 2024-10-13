@@ -1,6 +1,7 @@
 import type { Metadata } from 'next'
 import { Author } from 'next/dist/lib/metadata/types/metadata-types'
 import '../styles/themes.scss'
+import { ThemeProvider } from '@/contexts/ThemeContext'
 
 export const author: Author = {
   url: 'https://github.com/rodrigoge',
@@ -32,9 +33,11 @@ export default function RootLayout({
   children: React.ReactNode
 }>) {
   return (
-    <html lang="en">
-      <link rel="icon" href="/favicon.ico" />
-      <body>{children}</body>
-    </html>
+    <ThemeProvider>
+      <html lang="en">
+        <link rel="icon" href="/favicon.ico" />
+        <body>{children}</body>
+      </html>
+    </ThemeProvider>
   )
 }
