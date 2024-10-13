@@ -1,6 +1,6 @@
 import type { Metadata } from 'next'
 import { Author } from 'next/dist/lib/metadata/types/metadata-types'
-import '../styles/themes.scss'
+import '../styles/globals.scss'
 import { ThemeProvider } from '@/contexts/ThemeContext'
 
 export const author: Author = {

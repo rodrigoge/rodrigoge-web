@@ -1,5 +1,26 @@
 @import '../../styles/themes.scss';
+@import '../../styles/colors.scss';
 
 .header_container {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
   background-color: var(--background-color);
+
+  .logo_container {
+    width: 32px;
+    height: 32px;
+    border-radius: 50%;
+    border: 1px solid $grey-300;
+    background: linear-gradient(60deg, $black-800, $black-900);
+    cursor: pointer;
+
+    .logo_content {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      width: 32px;
+      height: 32px;
+    }
+  }
 }
